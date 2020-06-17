@@ -1,6 +1,5 @@
 /* 
 Naomi Wildeboer
-
 June 10, 2020
 */
 
@@ -12,19 +11,41 @@ function getRandomInteger (minimum, maximum) {
 }
 
 // Povided Arrays
-const nouns = ['dragons', 'toasters']
+const nouns = ['Pam', 'Dunder Mifflin', 'battlestar galactica', 'bear', 'Dwight', 'Schrute Farms', 'beet', 'Scranton', 'Michael Scott', 'paper', 'board room']
 
-const verbs = ['walked', 'ran']
+const verbs = ['Count', 'ran', 'meet', 'fight', 'compete', 'dance', 'gossip', 'declare', 'propose', 'work']
 
-const adverbs = ['menacingly', 'intentionally']
+const adverbs = ['angrily', 'intentionally', 'loudly', 'creepily', 'frantically', 'sarcastically', 'secretly', 'quickly', 'romantically', 'lazily']
 
-const adjectives = ['wild', 'slippery']
+const adjectives = ['self-absorbed', 'short', 'sleepy', 'quaint', 'playful', 'obnoxious', 'hungry', 'oblivious,', 'awkward', 'unaware']
 
 const proNouns = ['they', 'we', 'you', 'he', 'she', 'I', 'it']
 
-const openings = ['Once upon a time', 'I watched']
+const openings = ['Once upon a time,', 'I watched', 'In a galaxy far far away,', 'Pam! Pam! Pam!', 'One morning,', 'Back at Schrute Farms,', 'Meanwhile, at the office ', 'Down in the warehouse,', 'Everyone shuffled into the conference room', 'It was 5, time to go home!' ]
 
-const closings = ['with extra cheese', 'the end']
+const closings = ['with extra cheese', 'the end', 'Goodnight everyone', 'And that\'s how Dwight became a father', 'Creed ran out of the room', 'How the turn tables', 'It was a prank all along', 'And so the day ended', 'Then everyone went to Poor Richards for a drink', 'And they all lived happily ever after']
+
+function createRandomSentence(){
+  const randomSentence = openings[ getRandomInteger(0, openings.length - 1) ] + ' ' +
+    adjectives[getRandomInteger(0, adjectives.length - 1)] + ' ' +
+    nouns[getRandomInteger(0, nouns.length - 1)] + ' ' +
+    proNouns[getRandomInteger(0, proNouns.length - 1)] + ' ' +
+    verbs[getRandomInteger(0, verbs.length - 1)] + ' ' +
+    adverbs[getRandomInteger(0, adverbs.length - 1)] + ' ' +
+    closings[getRandomInteger(0, closings.length - 1)] + '\.'
+  return randomSentence
+} 
+
+function outputSentence( sentence){
+  console.log('\n')
+  console.log(sentence)
+}
+
+const numberOfSentences = 10
+
+for(let i = 0; i < numberOfSentences; i++){
+  outputSentence(createRandomSentence())
+}
 
 // Instructions:
 
@@ -85,3 +106,19 @@ const closings = ['with extra cheese', 'the end']
 
 // Submission
 // Submit your GitHub repo URL through the LMS.
+
+
+// add the words to arrays
+
+// Create a function that creates a random sentence 
+// Does this function require any parameters: no
+// Does the function need to return anything: yes a new random sentence 
+// How do you create a random sentance?
+
+// Create a function that outputs some text
+// Does function require any parameters: yes, the text to output
+// Does this function need to return anything:  no
+
+// execute a loop 10 times 
+// each cycle of the loop will create a new random sentence and then output it
+
