@@ -1,6 +1,6 @@
 /* 
 Naomi Wildeboer
-June 10, 2020
+June 15, 2020
 */
 
 // This function returns a random number between (and including both) minimum and maximum
@@ -8,7 +8,7 @@ function getRandomInteger (minimum, maximum) {
   minimum = Math.ceil(minimum) // minimum is inclusive
   maximum = Math.floor(maximum + 1) // maximum is exclusive so we add one
   return Math.floor(Math.random() * (maximum - minimum)) + minimum
-}
+} 
 
 // Povided Arrays
 const nouns = ['Pam', 'Dunder Mifflin', 'battlestar galactica', 'bear', 'Dwight', 'Schrute Farms', 'beet', 'Scranton', 'Michael Scott', 'paper', 'board room']
