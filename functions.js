@@ -1,7 +1,7 @@
 /* 
 Naomi Wildeboer
 June 15, 2020
-test
+test 2
 */
 
 // This function returns a random number between (and including both) minimum and maximum
